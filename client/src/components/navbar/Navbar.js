@@ -62,7 +62,7 @@ export default function Navbar() {
           <li className="hidden md:flex">
             <a href="#about">PRODUCT PAGE</a>
           </li>
-          <li className="text-3xl md:hidden mr-4">
+          <li className="text-3xl md:text-[3px] mr-4">
             <Badge badgeContent={4} color="error">
               <ShoppingCartOutlinedIcon />
             </Badge>
