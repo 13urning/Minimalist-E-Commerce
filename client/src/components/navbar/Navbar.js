@@ -8,17 +8,13 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 export default function Navbar() {
   const [userScroll, setUserScroll] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      window.pageYOffset > 60 ? setUserScroll(true) : setUserScroll(false);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [userScroll]);
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      setUserScroll(true);
+    } else {
+      setUserScroll(false);
+    }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -26,12 +22,15 @@ export default function Navbar() {
       behavior: "smooth",
     });
   };
+
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <>
       <nav
-        className={
-          "sticky top-0 w-full text-xl z-[200] bg-white items-center shadow-md flex px-10 py-5 justify-between transition-all ease-in duration-300 left-0  md:px-20 "
-        }
+        className={`sticky top-0 w-full text-xl z-[200] bg-white items-center shadow-md flex px-10 py-5 justify-between ${
+          userScroll ? "h-20" : "h-24"
+        }  transition-all ease-in duration-300 left-0  md:px-20`}
       >
         <Link to="/">
           <img
