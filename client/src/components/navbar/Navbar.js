@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 
+import Badge from "@mui/material/Badge";
+
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+
 export default function Navbar() {
   const [userScroll, setUserScroll] = useState(false);
   useEffect(() => {
@@ -23,16 +28,19 @@ export default function Navbar() {
         <img src="https://placehold.co/150x50?text=LOGO" alt="" />
         <ul className="flex gap-2 md:gap-4">
           <li className="hidden md:flex">
-            <a href="#home">Home</a>
+            <a href="#home">CATEGORIES</a>
           </li>
           <li className="hidden md:flex">
-            <a href="#about">About</a>
+            <a href="#about">PRODUCT PAGE</a>
           </li>
-          <li className="hidden md:flex">
-            <a href="#project">Projects</a>
+          <li className="text-3xl md:hidden mr-4">
+            <Badge badgeContent={4} color="error">
+              <ShoppingCartOutlinedIcon />
+            </Badge>
           </li>
-          <li className="text-3xl md:hidden">Burger Menu</li>
-          <li className="text-3xl md:hidden">Cart Icon</li>
+          <li className="text-3xl md:hidden">
+            <MenuRoundedIcon />
+          </li>
         </ul>
       </nav>
     </div>
