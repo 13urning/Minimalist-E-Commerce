@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Badge from "@mui/material/Badge";
 
@@ -18,14 +19,28 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [userScroll]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <div>
+    <>
       <nav
-        className={`sticky w-full text-xl z-[200] bg-white items-center shadow-md flex px-10 py-5 justify-between ${
-          userScroll ? "h-15" : "h-auto"
-        } transition-all ease-in duration-300 left-0 top-0 md:px-20`}
+        className={
+          "sticky top-0 w-full text-xl z-[200] bg-white items-center shadow-md flex px-10 py-5 justify-between transition-all ease-in duration-300 left-0  md:px-20 "
+        }
       >
-        <img src="https://placehold.co/150x50?text=LOGO" alt="" />
+        <Link to="/">
+          <img
+            src="https://placehold.co/150x50?text=LOGO"
+            alt="logo"
+            onClick={scrollToTop}
+          />
+        </Link>
+
         <ul className="flex gap-2 md:gap-4">
           <li className="hidden md:flex">
             <a href="#home">CATEGORIES</a>
@@ -43,6 +58,6 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
-    </div>
+    </>
   );
 }
