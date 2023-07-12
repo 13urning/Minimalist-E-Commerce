@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="grid h-[32rem] grid-cols-2 gap-4 mt-5 md:grid-cols-5 md:grid-rows-2">
             <div className="overflow-hidden relative cursor-pointer md:row-span-2 md:col-span-3 ">
               <Link to="categories/furnitures">
-                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25"></div>
+                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25 transition-all ease-in duration-300 hover:bg-slate-950/40"></div>
                 <img
                   src="https://placehold.co/300x300?text=CATEGORY1"
                   alt="img1"
@@ -22,7 +22,7 @@ export default function Hero() {
             </div>
             <div className="overflow-hidden relative cursor-pointer md:row-span-2">
               <Link to="categories/skin-care">
-                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25"></div>
+                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25 transition-all ease-in duration-300 hover:bg-slate-950/40"></div>
                 <img
                   src="https://placehold.co/300x300?text=CATEGORY2"
                   alt=""
@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
             <div className="md:col-start-5 overflow-hidden relative cursor-pointer">
               <Link to="categories/kitchen">
-                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25"></div>
+                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25 transition-all ease-in duration-300 hover:bg-slate-950/40"></div>
                 <img
                   src="https://placehold.co/300x300?text=CATEGORY3"
                   alt=""
@@ -44,7 +44,7 @@ export default function Hero() {
             </div>
             <div className=" md:col-start-5 overflow-hidden relative cursor-pointer">
               <Link to="categories/electronics">
-                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25"></div>
+                <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25 transition-all ease-in duration-300 hover:bg-slate-950/40"></div>
                 <img
                   src="https://placehold.co/300x300?text=CATEGORY4"
                   alt=""
