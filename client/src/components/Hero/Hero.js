@@ -6,8 +6,8 @@ export default function Hero() {
     <>
       <div className="p-3 md:pt-10">
         <div className="container mx-auto">
-          <div className="grid h-[32rem] grid-cols-2 gap-4 md:mt-5 md:grid-cols-5 md:grid-rows-2">
-            <div className="overflow-hidden relative cursor-pointer md:row-span-2 md:col-span-3 ">
+          <div className="grid h-[32rem] grid-cols-2 gap-4 md:mt-5 md:grid-cols-4 md:grid-rows-2">
+            <div className="overflow-hidden relative cursor-pointer md:row-span-2 md:col-span-2 ">
               <Link to="categories/furnitures">
                 <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25 transition-all ease-in duration-300 hover:bg-slate-950/40"></div>
                 <img
@@ -31,7 +31,7 @@ export default function Hero() {
                 <p className="absolute bottom-4 left-4 text-2xl">Skin care</p>
               </Link>
             </div>
-            <div className="md:col-start-5 overflow-hidden relative cursor-pointer">
+            <div className="md:col-start-4 overflow-hidden relative cursor-pointer">
               <Link to="categories/kitchen">
                 <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25 transition-all ease-in duration-300 hover:bg-slate-950/40"></div>
                 <img
@@ -42,7 +42,7 @@ export default function Hero() {
                 <p className="absolute bottom-4 left-4 text-2xl">Kitchen</p>
               </Link>
             </div>
-            <div className=" md:col-start-5 overflow-hidden relative cursor-pointer">
+            <div className=" md:col-start-4 overflow-hidden relative cursor-pointer">
               <Link to="categories/electronics">
                 <div className="absolute w-full h-full top-0 left-0 bg-slate-950/25 transition-all ease-in duration-300 hover:bg-slate-950/40"></div>
                 <img

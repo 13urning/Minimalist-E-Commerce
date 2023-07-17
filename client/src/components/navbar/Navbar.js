@@ -43,7 +43,7 @@ export default function Navbar() {
         </div>
       </div>
       <nav
-        className={`sticky top-0 w-full text-xl z-[200] bg-white items-center shadow-md flex px-10 py-5 justify-between ${
+        className={`sticky top-0 w-full text-xl z-[200] bg-white items-center shadow-md flex px-4 md:px-10 py-5 justify-between ${
           userScroll ? "h-20" : "h-24"
         }  transition-all ease-in duration-300 left-0  md:px-20`}
       >
