@@ -8,7 +8,7 @@ export default function ProductItems() {
       {filteredItems.map((item) => (
         <div
           key={item.id}
-          className="outline outline-2 outline-slate-300 normal hover:outline-black transition-all ease-in duration-300"
+          className="outline outline-2 outline-gray-300 normal hover:outline-black transition-all ease-in duration-250"
         >
           <Link
             onClick={() => window.top(0, 0)}
@@ -19,7 +19,7 @@ export default function ProductItems() {
             </div>
             <div className="text-lg p-3">
               <p>{item.description}</p>
-              <p className="item-price">${item.price}</p>
+              <p className="font-semibold text-xl mt-4">${item.price}</p>
             </div>
           </Link>
         </div>
