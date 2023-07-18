@@ -5,7 +5,7 @@ export default function Banner({ title, text, img }) {
   return (
     <div className="pb-40 px-6">
       <div className="container mx-auto max-w-[1200px]">
-        <div className="flex justify-between h-[40rem] overflow-hidden">
+        <div className="flex justify-between h-[32rem] overflow-hidden">
           <div className="w-full md:w-1/2 text-start flex flex-col justify-center items-center px-[4rem] py-0 md:px-[11rem] bg-[#e9e9e9]">
             <div className="text">
               <h2 className="text-[2.5rem] md:text-3xl font-semibold mb-6">
