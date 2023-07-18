@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <>
       <div className="p-6 md:pt-10">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-[1200px]">
           <div className="grid h-[40rem] grid-cols-2 gap-4 md:mt-5 md:grid-cols-4 md:grid-rows-2 md:h-[30rem]">
             <div className="overflow-hidden relative cursor-pointer md:row-span-2 md:col-span-2 ">
               <Link to="categories/furnitures">
