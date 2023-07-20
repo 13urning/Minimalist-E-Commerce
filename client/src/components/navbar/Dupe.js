@@ -34,7 +34,7 @@ export default function Navbar() {
           className="right-6 top-12 absolute cursor-pointer"
           onClick={() => setMobMenu(!mobMenu)}
         >
-          <CloseRoundedIcon fontSize="large" />
+          <CloseRoundedIcon />
         </div>
         <div className="uppercase flex flex-col gap-8 justify-center absolute top-[44] left-[50] text-3xl text-center">
           <Link to="/categories/all">categories</Link>
@@ -42,50 +42,38 @@ export default function Navbar() {
           <Link to="/categories/product/1">featured product</Link>
         </div>
       </div>
+      <nav
+        className={`sticky top-0 w-full text-[1.8rem] z-[200] bg-white items-center shadow-md flex px-6 md:px-10 py-5 justify-between ${
+          userScroll ? "h-[8rem]" : "h-[10rem]"
+        }  transition-all ease-in duration-300 left-0  md:px-20 `}
+      >
+        <Link to="/">
+          <img
+            src="https://placehold.co/150x50?text=LOGO"
+            alt="logo"
+            onClick={scrollToTop}
+          />
+        </Link>
 
-      {/* navbar */}
-      <nav className="sticky bg-white top-0 w-full z-[100] shadow-md">
-        <div className="container mx-auto max-w-[1200px] px-6 md:px-0">
-          <div
-            className={`flex justify-between items-center  transition-all ease-in duration-100 ${
-              userScroll ? "h-[8rem]" : "h-[12rem]"
-            }`}
+        <ul className="flex gap-2 md:gap-4">
+          <li className="hidden md:flex">
+            <a href="#home">CATEGORIES</a>
+          </li>
+          <li className="hidden md:flex">
+            <a href="#about">PRODUCT PAGE</a>
+          </li>
+          <li className="text-3xl mr-4">
+            <Badge badgeContent={4} color="error">
+              <ShoppingCartOutlinedIcon fontSize="inherit" />
+            </Badge>
+          </li>
+          <li
+            className="text-3xl md:hidden"
+            onClick={() => setMobMenu((prev) => !prev)}
           >
-            <Link to="/">
-              <img
-                src="https://placehold.co/500x500?text=LOGO"
-                alt="logo"
-                onClick={scrollToTop}
-                className="w-[8.5rem] h-auto"
-              />
-            </Link>
-            <div className="text-3xl flex gap-10 uppercase">
-              <Link
-                onClick={() => window.scrollTo(0, 0)}
-                to="/categories/all"
-                className="hidden md:block"
-              >
-                categories
-              </Link>
-              <Link
-                onClick={() => window.scrollTo(0, 0)}
-                to="/categories/product/19"
-                className="hidden md:block"
-              >
-                product page
-              </Link>
-              <Badge badgeContent={4} color="error">
-                <ShoppingCartOutlinedIcon fontSize="large" />
-              </Badge>
-              <div
-                className="text-3xl md:hidden"
-                onClick={() => setMobMenu((prev) => !prev)}
-              >
-                <MenuRoundedIcon fontSize="inherit" />
-              </div>
-            </div>
-          </div>
-        </div>
+            <MenuRoundedIcon fontSize="inherit" />
+          </li>
+        </ul>
       </nav>
       <style>{`
         .hideMenuNav{
