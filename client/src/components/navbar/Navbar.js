@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import Badge from "@mui/material/Badge";
@@ -6,10 +6,20 @@ import Badge from "@mui/material/Badge";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import EmptyCart from "../EmptyCart/EmptyCart";
+import CartwithItems from "../CartWithItems/CartwithItems";
 
 export default function Navbar() {
   const [userScroll, setUserScroll] = useState(false);
   const [mobMenu, setMobMenu] = useState(false);
+  const [cart, setCart] = useState(false);
+
+  const { cartItem } = useContext();
+
+  const openCart = () => {
+    setCart(!cart);
+  };
+
   const handleScroll = () => {
     if (window.scrollY > 10) {
       setUserScroll(true);
@@ -29,6 +39,7 @@ export default function Navbar() {
 
   return (
     <>
+      {/* burger menu */}
       <div className={mobMenu ? "showMenuNav" : "hideMenuNav"}>
         <div
           className="right-6 top-12 absolute cursor-pointer"
@@ -40,6 +51,29 @@ export default function Navbar() {
           <Link to="/categories/all">categories</Link>
           <Link to="/categories/lamps">lamps</Link>
           <Link to="/categories/product/1">featured product</Link>
+        </div>
+      </div>
+
+      {/* overlay */}
+      <div
+        onClick={openCart}
+        className={`page-overlay ${cart ? "open-flex" : "closed-flex"}`}
+      ></div>
+
+      {/* cart */}
+      <div className={`cart-div ${cart ? "open-cart" : "closed-cart"}`}>
+        <div className="cart-title-btn">
+          <h2 className="cart-full-h2">
+            Your Shopping Cart({cartItem.length})
+          </h2>
+          <i>icon</i>
+        </div>
+        <div className="cart-body">
+          {cartItem.length < 1 ? (
+            <EmptyCart openCart={openCart} />
+          ) : (
+            <CartwithItems />
+          )}
         </div>
       </div>
 
