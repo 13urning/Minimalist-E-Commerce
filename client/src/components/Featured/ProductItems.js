@@ -17,9 +17,9 @@ export default function ProductItems() {
             <div>
               <img src={item.img} alt="products" className="w-full" />
             </div>
-            <div className="text-lg p-3">
+            <div className="text-xl p-3">
               <p>{item.description}</p>
-              <p className="font-semibold text-xl mt-4">${item.price}</p>
+              <p className="font-semibold text-2xl mt-4">${item.price}</p>
             </div>
           </Link>
         </div>

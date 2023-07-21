@@ -17,7 +17,7 @@ export default function TrendingSlider() {
     <div className="pb-[10rem] px-6">
       <div className="container mx-auto max-w-[1200px]">
         <div className="flex justify-between">
-          <h3 className="text-3xl font-semibold mb-[4.2rem] mt-[1rem]">
+          <h3 className="text-4xl font-semibold mb-[4.2rem] mt-[1rem]">
             Hot Now
           </h3>
           <div className="flex gap-[0.4rem]">

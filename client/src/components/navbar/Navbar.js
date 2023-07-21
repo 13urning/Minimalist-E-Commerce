@@ -58,14 +58,14 @@ export default function Navbar() {
       {/* overlay */}
       <div
         onClick={openCart}
-        className={`fixed top-0 left-0 w-full min-h-full bg-[#00000075] z-[998] transition-all ease-in duration-300 ${
+        className={`fixed top-0 left-0 w-full min-h-full bg-[#00000075] z-[998] transition-all ease-in duration-400 ${
           cart ? "flex" : "hidden"
         }`}
       ></div>
 
       {/* cart */}
       <div
-        className={`flex flex-col fixed top-0 right-0 p-12 bg-white h-[100vh] w-full md:w-[50rem] transition-all ease-in duration-400 z-[999] ${
+        className={`flex flex-col fixed top-0 right-0 p-12 bg-white h-[100vh] w-full md:w-[50rem] transition-all ease-in duration-500 z-[999] ${
           cart ? "right-0" : "right-[-100%]"
         }`}
       >
