@@ -8,13 +8,14 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import EmptyCart from "../EmptyCart/EmptyCart";
 import CartwithItems from "../CartWithItems/CartwithItems";
+import { CartContext } from "../../pages/ProductPage";
 
 export default function Navbar() {
   const [userScroll, setUserScroll] = useState(false);
   const [mobMenu, setMobMenu] = useState(false);
   const [cart, setCart] = useState(false);
 
-  const { cartItem } = useContext();
+  // const { cartItem } = useContext(CartContext);
 
   const openCart = () => {
     setCart(!cart);
@@ -57,31 +58,41 @@ export default function Navbar() {
       {/* overlay */}
       <div
         onClick={openCart}
-        className={`page-overlay ${cart ? "open-flex" : "closed-flex"}`}
+        className={`fixed top-0 left-0 w-full min-h-full bg-[#00000075] z-[998] transition-all ease-in duration-300 ${
+          cart ? "flex" : "hidden"
+        }`}
       ></div>
 
       {/* cart */}
-      <div className={`cart-div ${cart ? "open-cart" : "closed-cart"}`}>
-        <div className="cart-title-btn">
-          <h2 className="cart-full-h2">
-            Your Shopping Cart({cartItem.length})
+      <div
+        className={`flex flex-col fixed top-0 right-0 p-12 bg-white h-[100vh] w-full md:w-[50rem] transition-all ease-in duration-400 z-[999] ${
+          cart ? "right-0" : "right-[-100%]"
+        }`}
+      >
+        <div className="text-[1.7rem] flex justify-between items-center">
+          <h2 className="text-[2.0rem]">
+            Your Shopping Cart ({/* ({cartItem.length}) */})
           </h2>
-          <i>icon</i>
+          <CloseRoundedIcon
+            fontSize="large"
+            onClick={openCart}
+            className="cursor-pointer"
+          />
         </div>
-        <div className="cart-body">
-          {cartItem.length < 1 ? (
+        <div className="h-[100vh] p-2">
+          {/* {cartItem.length < 1 ? (
             <EmptyCart openCart={openCart} />
           ) : (
             <CartwithItems />
-          )}
+          )} */}
         </div>
       </div>
 
       {/* navbar */}
       <nav className="sticky bg-white top-0 w-full z-[100] shadow-md">
-        <div className="container mx-auto max-w-[1200px] px-6 md:px-0">
+        <div className="container mx-auto max-w-[1200px]  md:px-0">
           <div
-            className={`flex justify-between items-center  transition-all ease-in duration-100 ${
+            className={`flex justify-between items-center px-6 transition-all ease-in duration-100 ${
               userScroll ? "h-[8rem]" : "h-[12rem]"
             }`}
           >
@@ -109,7 +120,11 @@ export default function Navbar() {
                 product page
               </Link>
               <Badge badgeContent={4} color="error">
-                <ShoppingCartOutlinedIcon fontSize="large" />
+                <ShoppingCartOutlinedIcon
+                  fontSize="large"
+                  onClick={openCart}
+                  className="cursor-pointer"
+                />
               </Badge>
               <div
                 className="text-3xl md:hidden"

@@ -11,13 +11,15 @@ export default function TrendingSlider() {
   };
   const slideRight = () => {
     let slider = document.getElementById("slider");
-    slider.scrollRight = slider.scrollRight + 235;
+    slider.scrollLeft = slider.scrollLeft + 235;
   };
   return (
     <div className="pb-[10rem] px-6">
       <div className="container mx-auto max-w-[1200px]">
         <div className="flex justify-between">
-          <h3 className="text-2xl font-semibold mb-[4.2rem]">Hot Now</h3>
+          <h3 className="text-3xl font-semibold mb-[4.2rem] mt-[1rem]">
+            Hot Now
+          </h3>
           <div className="flex gap-[0.4rem]">
             <button
               className="text-white bg-[#373737] p-[1rem] text-xl h-[4rem] w-[4rem] 
@@ -39,7 +41,10 @@ export default function TrendingSlider() {
             </button>
           </div>
         </div>
-        <div className="row-container" id="slider">
+        <div
+          className="flex gap-9 overflow-x-scroll overflow-y-hidden scroll-smooth relative p-4 whitespace-nowrap no-scrollbar"
+          id="slider"
+        >
           <TrendingItem />
         </div>
       </div>
