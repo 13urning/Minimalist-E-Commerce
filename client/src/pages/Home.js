@@ -17,7 +17,7 @@ export default function Home() {
       />
       <TrendingSlider />
       <BannerReverse
-        title="Creative harmonious living"
+        title="Comfortable & Elegant Living"
         text="BRAND Products are all made to standard sizes so that you can mix and match them freely"
         img="https://placehold.co/300x300?text=BANNER"
       />

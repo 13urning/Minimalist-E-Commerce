@@ -11,7 +11,7 @@ export default function Banner({ title, text, img }) {
               <h2 className="text-[2.5rem] md:text-3xl font-semibold mb-6">
                 {title}
               </h2>
-              <p className="text-[1.2rem] md:text-base">{text}</p>
+              <p className="text-[1.5rem] md:text-xl">{text}</p>
               <Link onClick={() => window.scrollTo(0, 0)} to="categories/all">
                 <button
                   className="bg-black text-white text-xl md:text-xl font-bold p-3 md:p-4 uppercase mt-8 cursor-pointer outline-black outline
