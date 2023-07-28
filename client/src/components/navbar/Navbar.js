@@ -15,7 +15,7 @@ export default function Navbar() {
   const [mobMenu, setMobMenu] = useState(false);
   const [cart, setCart] = useState(false);
 
-  // const { cartItem } = useContext(CartContext);
+  const { cartItem } = useContext(CartContext);
 
   const openCart = () => {
     setCart(!cart);
@@ -80,11 +80,11 @@ export default function Navbar() {
           />
         </div>
         <div className="h-[100vh] p-2">
-          {/* {cartItem.length < 1 ? (
+          {cartItem.length < 1 ? (
             <EmptyCart openCart={openCart} />
           ) : (
             <CartwithItems />
-          )} */}
+          )}
         </div>
       </div>
 

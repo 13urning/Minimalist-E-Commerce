@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer className="flex flex-col justify-center text-center h-[17rem] bg-black">
         <div className="flex gap-12 text-center flex-wrap justify-center text-white text-2xl ">
-          <a href="#" className="hover:underline">
+          {/* <a href="#" className="hover:underline">
             About
           </a>
           <a href="#" className="hover:underline">
@@ -22,7 +22,7 @@ export default function Footer() {
           </a>
           <a href="#" className="hover:underline">
             Contact Us
-          </a>
+          </a> */}
         </div>
       </footer>
     </>
