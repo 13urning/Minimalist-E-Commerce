@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../pages/ProductPage";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 export default function CartItem() {
   const [quantity, setQuantity] = useState(1);
@@ -33,17 +34,23 @@ export default function CartItem() {
   return (
     <>
       {cartItem.map((item, id) => (
-        <div>
-          <div>
-            <img src="" alt="" />
+        <div key={id} className="cart-item">
+          <div className="cart-img">
+            <img src={item.img} alt="product" />
+          </div>
+          <div className="cart-middle">
+            <p className="cart-name">{item.description}</p>
+            <div className="cart-btns">
+              <button onClick={decrease}>-</button>
+              <p className="quantity">{quantity}</p>
+              <button onClick={increase}>+</button>
+            </div>
           </div>
           <div>
-            <p>{item.description}</p>
-            <div>
-              <button>-</button>
-              <p>{quantity}</p>
-              <button>+</button>
-            </div>
+            <p>${calcPrice(quantity, item.price)}.00</p>
+            <i onClick={() => removeFromCart(item.id)}>
+              <CloseRoundedIcon fontSize="large" />
+            </i>
           </div>
         </div>
       ))}
