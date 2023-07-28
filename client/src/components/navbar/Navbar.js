@@ -71,7 +71,7 @@ export default function Navbar() {
       >
         <div className="text-[1.7rem] flex justify-between items-center">
           <h2 className="text-[2.0rem]">
-            Your Shopping Cart ({/* ({cartItem.length}) */})
+            Your Shopping Cart ({cartItem.length})
           </h2>
           <CloseRoundedIcon
             fontSize="large"
@@ -92,7 +92,7 @@ export default function Navbar() {
       <nav className="sticky bg-white top-0 w-full z-[100] shadow-md">
         <div className="container mx-auto max-w-[1200px]  md:px-0">
           <div
-            className={`flex justify-between items-center px-6 transition-all ease-in duration-100 ${
+            className={`flex justify-between items-center  transition-all ease-in duration-100 ${
               userScroll ? "h-[8rem]" : "h-[12rem]"
             }`}
           >
@@ -119,7 +119,7 @@ export default function Navbar() {
               >
                 product page
               </Link>
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={cartItem.length} color="error">
                 <ShoppingCartOutlinedIcon
                   fontSize="large"
                   onClick={openCart}
