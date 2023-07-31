@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* navbar */}
       <nav className="sticky bg-white top-0 w-full z-[100] shadow-md">
-        <div className="container mx-auto max-w-[1200px]  md:px-0">
+        <div className="container mx-auto max-w-[1200px] p-6 lg:px-0">
           <div
             className={`flex justify-between items-center  transition-all ease-in duration-100 ${
               userScroll ? "h-[8rem]" : "h-[12rem]"

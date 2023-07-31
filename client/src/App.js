@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import { CartContext } from "./pages/ProductPage";
 import Categories from "./pages/Categories";
+import All from "./components/Categories-pages/All";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -30,7 +31,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="categories" element={<Categories />}></Route>
+        <Route path="categories" element={<Categories />}>
+          <Route path="all" element={<All />} />
+        </Route>
       </Routes>
     </CartContext.Provider>
   );
