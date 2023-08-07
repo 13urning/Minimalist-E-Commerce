@@ -44,8 +44,8 @@ export default function ProductPage() {
         <p>Items has been added to your cart </p>
       </div>
 
-      <div className="pt-[14rem]">
-        <div className="container mx-auto max-w-[1200px]">
+      <div className="pt-[10rem] ">
+        <div className="container mx-auto max-w-[1200px] p-6">
           <div className="flex mb-[10rem] relative w-full">
             <h3 className="absolute text-4xl top-[8px] left-1/2 translate-x-[-50%]">
               {items[0].description}
@@ -108,29 +108,29 @@ export default function ProductPage() {
                     addToCart(item[0]);
                     showNotify();
                   }}
-                  className="bg-transparent border-2 border-black w-1/2 h-[5.5rem] text-2xl uppercase font-bold cursor-pointer transition-all duration-200 hover:bg-white"
+                  className="bg-transparent border-2 border-black w-1/2 h-[5.5rem] text-2xl uppercase font-bold cursor-pointer transition-all duration-200 hover:bg-black hover:text-white"
                 >
                   add to cart
                 </button>
-                <button className="bg-transparent border-2 border-black w-1/2 h-[5.5rem] text-2xl uppercase font-bold cursor-pointer transition-all duration-200 hover:bg-white">
+                <button className="bg-transparent border-2 border-black w-1/2 h-[5.5rem] text-2xl uppercase font-bold cursor-pointer transition-all duration-200 hover:bg-black hover:text-white">
                   buy now
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="specifications">
-            <div className="spec">
-              <p className="spec-title">Texture:</p>
-              <p className="title-desc">{items[0].texture}</p>
+          <div className="flex gap-12 justify-between w-full h-[10rem] mb mb-[10rem]">
+            <div className="bg-[#e5e5e5] w-full flex flex-col justify-between p-[2rem]">
+              <p className="text-3xl font-semibold">Texture:</p>
+              <p className="text-xl">{items[0].texture}</p>
             </div>
-            <div className="spec">
-              <p className="spec-title">Weight:</p>
-              <p className="title-desc">{items[0].weight}</p>
+            <div className="bg-[#e5e5e5] w-full flex flex-col justify-between p-[2rem]">
+              <p className="text-3xl font-semibold">Weight:</p>
+              <p className="text-xl">{items[0].weight}</p>
             </div>
-            <div className="spec">
-              <p className="spec-title">Size:</p>
-              <p className="title-desc">{items[0].size}</p>
+            <div className="bg-[#e5e5e5] w-full flex flex-col justify-between p-[2rem]">
+              <p className="text-3xl font-semibold">Size:</p>
+              <p className="text-xl">{items[0].size}</p>
             </div>
           </div>
         </div>
