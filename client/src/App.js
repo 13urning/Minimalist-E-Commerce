@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import { useEffect, useState } from "react";
 
 import Home from "./pages/Home";
-import { CartContext } from "./pages/ProductPage";
+import ProductPage, { CartContext } from "./pages/ProductPage";
 import Categories from "./pages/Categories";
 import All from "./components/Categories-pages/All";
 
@@ -34,6 +34,7 @@ function App() {
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
         </Route>
+        <Route path="categories/product/:id" element={<ProductPage />} />
       </Routes>
     </CartContext.Provider>
   );

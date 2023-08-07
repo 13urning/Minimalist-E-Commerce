@@ -39,59 +39,82 @@ export default function ProductPage() {
     <>
       <div
         onAnimationEnd={() => setNotify(false)}
-        className={`notify ${notify ? "slide-in" : ""}`}
+        className={`notify ${notify ? "slide-in" : ""} hidden`}
       >
         <p>Items has been added to your cart </p>
       </div>
 
-      <div className="product-page-div">
-        <div className="container">
-          <div className="product-div">
-            <h3 className="product-big-name">{items[0].description}</h3>
-            <div className="product-left">
-              <div className="big-img">
-                <img src={image} alt="product" />
+      <div className="pt-[14rem]">
+        <div className="container mx-auto max-w-[1200px]">
+          <div className="flex mb-[10rem] relative w-full">
+            <h3 className="absolute text-4xl top-[8px] left-1/2 translate-x-[-50%]">
+              {items[0].description}
+            </h3>
+            <div className="w-1/2 h-full pt-[5rem]">
+              <div className="w-full h-[70%] flex justify-center ml-4">
+                <img
+                  src={image}
+                  alt="product"
+                  className="w-[75%] h-full object-cover"
+                />
               </div>
-              <div className="small-imgs">
+              <div className="w-full flex gap-5 justify-center items-center p-12">
                 <img
                   src={items[0].img}
                   alt="product"
                   onMouseOver={changeImage}
+                  className="w-[22%] h-[20%] object-cover cursor-pointer"
                 />
                 <img
                   src={items[0].otherImgs[0]}
                   alt="product"
                   onMouseOver={changeImage}
+                  className="w-[22%] h-[20%] object-cover cursor-pointer"
                 />
                 <img
                   src={items[0].otherImgs[1]}
                   alt="product"
                   onMouseOver={changeImage}
+                  className="w-[22%] h-[20%] object-cover cursor-pointer"
                 />
               </div>
             </div>
-            <div className="product-right">
-              <p>{items[0].specs}</p>
-              <div className="product-quant">
+            <div className="w-1/2 h-full bg-[#e5e5e5] py-[15rem] px-[5rem]">
+              <p className="text-2xl mb-4">{items[0].specs}</p>
+              <div className="flex justify-between text-2xl mb-[5rem] font-semibold items-center">
                 <p>Quantity</p>
-                <div className="product-btns">
-                  <button onClick={decrease}>-</button>
-                  <p className="quantity">{quantity}</p>
-                  <button onClick={increase}>+</button>
+                <div className="flex border border-solid border-black">
+                  <button
+                    onClick={decrease}
+                    className="text-2xl w-[5.5rem] h-[5.5rem] text-black cursor-pointer bg-white border-r-[1px] border-black transition-all duration-200 hover:bg-transparent"
+                  >
+                    -
+                  </button>
+                  <p className="outline-offset-[-2px] w-[6rem] h-[5rem] text-center pt-6">
+                    {quantity}
+                  </p>
+                  <button
+                    onClick={increase}
+                    className="text-3xl w-[5.5rem] h-[5.5rem] text-black cursor-pointer bg-white border-l-[1px] border-black transition-all duration-200 hover:bg-transparent"
+                  >
+                    +
+                  </button>
                 </div>
                 <p className="product-price">${calcPrice(quantity)}.00</p>
               </div>
-              <div className="atc-buy">
+              <div className="flex gap-[2rem]">
                 <button
                   onClick={() => {
                     addToCart(item[0]);
                     showNotify();
                   }}
-                  className="atc-btn"
+                  className="bg-transparent border-2 border-black w-1/2 h-[5.5rem] text-2xl uppercase font-bold cursor-pointer transition-all duration-200 hover:bg-white"
                 >
                   add to cart
                 </button>
-                <button className="buy-btn">buy now</button>
+                <button className="bg-transparent border-2 border-black w-1/2 h-[5.5rem] text-2xl uppercase font-bold cursor-pointer transition-all duration-200 hover:bg-white">
+                  buy now
+                </button>
               </div>
             </div>
           </div>
