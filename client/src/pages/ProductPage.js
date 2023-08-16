@@ -46,12 +46,12 @@ export default function ProductPage() {
 
       <div className="pt-[10rem] ">
         <div className="container mx-auto max-w-[1200px] p-6">
-          <div className="flex mb-[10rem] relative w-full">
-            <h3 className="absolute text-4xl top-[8px] left-1/2 translate-x-[-50%]">
+          <div className="flex mb-[10rem] flex-col items-center gap-12 md:relative md:w-full md:flex-row">
+            <h3 className="w-[31rem] text-center md:absolute text-4xl md:top-[8px] md:left-1/2 md:translate-x-[-50%]">
               {items[0].description}
             </h3>
-            <div className="w-1/2 h-full pt-[5rem]">
-              <div className="w-full h-[70%] flex justify-center ml-4">
+            <div className="w-full md:w-1/2 h-full pt-[5rem]">
+              <div className="w-full h-[70%] flex justify-center">
                 <img
                   src={image}
                   alt="product"
@@ -79,7 +79,7 @@ export default function ProductPage() {
                 />
               </div>
             </div>
-            <div className="w-1/2 h-full bg-[#e5e5e5] py-[15rem] px-[5rem]">
+            <div className="w-full md:w-1/2 h-full bg-[#e5e5e5] py-[15rem] px-[5rem]">
               <p className="text-2xl mb-4">{items[0].specs}</p>
               <div className="flex justify-between text-2xl mb-[5rem] font-semibold items-center">
                 <p>Quantity</p>
