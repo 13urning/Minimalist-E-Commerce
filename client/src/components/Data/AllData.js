@@ -6,8 +6,8 @@ export const items = [
     description: "Little Armchair Sheepskin",
     price: 986,
     otherImgs: [
-      "https://placehold.co/300x300?text=product",
-      "https://placehold.co/300x300?text=product",
+      "https://placehold.co/300x300?text=productimg1",
+      "https://placehold.co/300x300?text=productimg2",
     ],
     specs:
       "Tradition Little Petra VB1 Armchair Sheepskin Moonlight/ Walnut/ Brass Limited Edition | We give you a special discount when you put this product in the basket.",
@@ -246,8 +246,8 @@ export const items = [
     description: "Anti Dark Light",
     price: 120,
     otherImgs: [
-      "https://placehold.co/300x300?text=product",
-      "https://placehold.co/300x300?text=product",
+      "https://placehold.co/300x300?text=productimg1",
+      "https://placehold.co/300x300?text=productimg2",
     ],
     specs:
       "Easy Mini W75 from Antidark lives fully up to its name. Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
@@ -262,8 +262,8 @@ export const items = [
     description: "Table Lamp",
     price: 75,
     otherImgs: [
-      "https://placehold.co/300x300?text=product",
-      "https://placehold.co/300x300?text=product",
+      "https://placehold.co/300x300?text=productimg1",
+      "https://placehold.co/300x300?text=productimg2",
     ],
     specs:
       "The lamp has also become popular in private homes and has especially made a comeback in recent years. This is not least due to the lamp's stylish design and the many color options that make it fit everywhere.",
@@ -294,8 +294,8 @@ export const items = [
     description: "Comfy Chair",
     price: 119,
     otherImgs: [
-      "https://placehold.co/300x300?text=product",
-      "https://placehold.co/300x300?text=product",
+      "https://placehold.co/300x300?text=productimg1",
+      "https://placehold.co/300x300?text=productimg2",
     ],
     specs:
       "Sum is a series designed by the Danish designer Simon Legald, who is the epitome of modern elegance. Elegant and resolute as the tip of a wing, the armrests spread out invitingly, as if they want to embrace you in the armchair's soft, homely space.",
