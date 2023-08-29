@@ -14,10 +14,7 @@ export default function CategoriesItemLamps() {
                 key={item.id}
                 className="outline outline-2 outline-offset-[-2px] outline-gray-300 transition-all ease-in duration-150 cursor-pointer hover:outline-black"
               >
-                <Link
-                  onClick={() => window.top(0, 0)}
-                  to={`/categories/product/${items.id}`}
-                >
+                <Link to={`/categories/product/${item.id}`}>
                   <div>
                     <img src={item.img} alt="" className="w-full" />
                   </div>
