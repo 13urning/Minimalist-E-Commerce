@@ -25,32 +25,32 @@ export default function CategoriesHeader() {
                 All
               </button>
             </Link>
-            <Link to="furnitures" onClick={() => handleBtnName("all")}>
+            <Link to="furnitures" onClick={() => handleBtnName("furnitures")}>
               <button className="px-6 py-[0.6rem] bg-transparent border transition-all duration-200 hover:border-black">
                 Furnitures
               </button>
             </Link>
-            <Link to="electonics" onClick={() => handleBtnName("all")}>
+            <Link to="electronics" onClick={() => handleBtnName("electronics")}>
               <button className="px-6 py-[0.6rem] bg-transparent border transition-all duration-200 hover:border-black">
                 Electronics
               </button>
             </Link>
-            <Link to="lamps" onClick={() => handleBtnName("all")}>
+            <Link to="lamps" onClick={() => handleBtnName("lamps")}>
               <button className="px-6 py-[0.6rem] bg-transparent border transition-all duration-200 hover:border-black">
                 Lamps
               </button>
             </Link>
-            <Link to="kitchen" onClick={() => handleBtnName("all")}>
+            <Link to="kitchen" onClick={() => handleBtnName("kitchen")}>
               <button className="px-6 py-[0.6rem] bg-transparent border transition-all duration-200 hover:border-black">
                 Kitchen
               </button>
             </Link>
-            <Link to="chairs" onClick={() => handleBtnName("all")}>
+            <Link to="chairs" onClick={() => handleBtnName("chairs")}>
               <button className="px-6 py-[0.6rem] bg-transparent border transition-all duration-200 hover:border-black">
                 Chairs
               </button>
             </Link>
-            <Link to="skin-care" onClick={() => handleBtnName("all")}>
+            <Link to="skin-care" onClick={() => handleBtnName("skin care")}>
               <button className="px-6 py-[0.6rem] bg-transparent border transition-all duration-200 hover:border-black">
                 Skin Care
               </button>

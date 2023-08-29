@@ -1,5 +1,12 @@
 import React from "react";
+import CategoriesItemKitchen from "./CategoriesItemKitchen";
+import Footer from "../Footer/Footer";
 
 export default function Kitchen() {
-  return <div>Kitchen</div>;
+  return (
+    <>
+      <CategoriesItemKitchen />
+      <Footer />
+    </>
+  );
 }

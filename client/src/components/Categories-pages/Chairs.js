@@ -1,5 +1,12 @@
 import React from "react";
+import CategoriesItemChairs from "./CategoriesItemChairs";
+import Footer from "../Footer/Footer";
 
 export default function Chairs() {
-  return <div>Chairs</div>;
+  return (
+    <>
+      <CategoriesItemChairs />
+      <Footer />
+    </>
+  );
 }
