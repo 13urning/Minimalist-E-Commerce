@@ -9,6 +9,7 @@ export default function CartwithItems() {
   useEffect(() => {
     const newTotalPrice = cartItem.reduce((acc, item) => acc + item.price, 0);
     setTotalPrice(newTotalPrice);
+    console.log(newTotalPrice);
   }, [cartItem]);
   return (
     <>
