@@ -13,8 +13,8 @@ export default function CartwithItems() {
   }, [cartItem]);
   return (
     <>
-      <div className="full-cart-div">
-        <div className="full-cart">
+      <div className="overflow-y-scroll p-2 h-[70%] mt-8 mr-[-0.5rem]">
+        <div className="w-full h-full flex flex-col gap-8">
           {cartItem.map((item, id) =>
             cartItem.length !== 0 ? (
               <CartItem key={id} item={item} setCartItem={setCartItem} />
@@ -24,13 +24,15 @@ export default function CartwithItems() {
           )}
         </div>
       </div>
-      <div className="subtotal-div">
-        <div className="sub-right">
+      <div className="flex w-full h-[12rem] border-t-2 border-dashed border-red-600 justify-between mt-6 py-6">
+        <div className="flex flex-col gap-4 text-2xl font-semibold">
           <p>Subtotal</p>
           <p className="total-price">{"$" + totalPrice + ".00"}</p>
         </div>
-        <div className="sub-left">
-          <Link>Checkout</Link>
+        <div className="mt-5">
+          <Link className="text-3xl text-black border-2 border-black bg-transparent p-6 transition-all duration-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-sm">
+            Go to Checkout
+          </Link>
         </div>
       </div>
     </>
